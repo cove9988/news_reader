@@ -11,7 +11,7 @@ import sys
 
 
 def get_page(url, proxy, header):
-    http = ProxyManager(proxy, headers=header)
+    http = ProxyManager(proxy_url = proxy, headers=header)
     r = http.request('GET', url)
     return BeautifulSoup(r.data, 'lxml')
 
